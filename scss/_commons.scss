@@ -1,0 +1,49 @@
+*{
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    main {
+        section{
+            h1 h2 h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+            }
+            .color-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+                .color-item {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: center;
+                    .card {
+                        align-items: center;
+                        img {
+                            margin: auto; 
+                        }
+                    }
+                }
+                // .color-image {
+                //     max-width: 100px;
+                //     max-height: 100px;
+                //     margin: 0 auto 10px;
+                //     }
+                    input {
+                        .quantity {
+                        width: 40px;
+                        }
+                    }    
+                }
+            .total {
+            text-align: center;
+            margin-top: 20px;
+            }
+        }
+    }   
+} 

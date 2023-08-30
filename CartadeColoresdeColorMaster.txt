@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Selector de Colores de Tinturas</title>
+</head>
+<body>
+  <h1>Tinturas color master</h1>
+  <section class="grid-conteiner">
+    <h2>Naturales</h2>
+    <div class="color-list grid-item">
+      <div class="color-item" data-price="1">
+        <img src="./Images/tono 1 tcm.jpg" alt="Tintura Tono Negro Color Master" class="color-image zoomable-image">
+        <span class="color-name">1 Negro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Castaño Oscuro Color Master" class="color-image zoomable-image">
+        <span class="color-name">3 Castaño Oscuro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Castaño Color Master" class="color-image zoomable-image">
+        <span class="color-name">4 Castaño</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Castaño Claro Color Master" class="color-image zoomable-image">
+        <span class="color-name">5 Castaño Claro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Rubio Oscuro Color Master" class="color-image zoomable-image">
+        <span class="color-name">6 Rubio Oscuro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Rubio Color Master" class="color-image zoomable-image">
+        <span class="color-name">7 Rubio </span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Rubio Claro Color Master" class="color-image zoomable-image">
+        <span class="color-name">8 Rubio Claro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Rubio Muy Claro Color Master" class="color-image zoomable-image">
+        <span class="color-name">9 Rubio Muy Claro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+      <h2>Naturales Intensos</h2>
+      <div class="color-item grid-item" data-price="1">
+        <img class="zoomable-image" src="azul.jpg" alt="Tintura Tono Rubio Claro Color Master" class="color-image zoomable-image">
+        <span class="color-name">7 Rubio Claro</span>
+        <input type="number" class="quantity" value="0" min="0">
+      </div>
+
+      <div class="color-item grid-item card" data-price="1 style="width: 18rem;">
+        <img src="..." class="card-img-top color-image zoomable-image" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <input type="number" class="quantity" value="0" min="0">
+        </div>
+      </div>
+      <!-- Agregar más colores aquí -->
+  </section>    
+  </div>
+  <div class="total">
+    <span>Total: </span>
+    <span id="total-amount">0</span>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.color-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.color-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.color-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto 10px;
+}
+
+.quantity {
+  width: 40px;
+}
+
+.total {
+  text-align: center;
+  margin-top: 20px;
+}
+
+const colorItems = document.querySelectorAll('.color-item');
+const totalAmount = document.getElementById('total-amount');
+
+colorItems.forEach(item => {
+  const quantityInput = item.querySelector('.quantity');
+  const price = parseFloat(item.getAttribute('data-price'));
+
+  quantityInput.addEventListener('input', updateTotal);
+
+  function updateTotal() {
+    let total = 0;
+    colorItems.forEach(item => {
+      const quantity = parseInt(item.querySelector('.quantity').value);
+      total += quantity * price;
+    });
+    totalAmount.textContent = total;
+  }
+});

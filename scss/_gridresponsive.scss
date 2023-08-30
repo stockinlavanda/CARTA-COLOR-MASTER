@@ -1,0 +1,8 @@
+.zoomable-image {
+    width: 300px; /* Ancho de la imagen */
+    transition: transform 0.2s; /* Transición suave al aplicar el zoom */
+}
+
+.zoomable-image:hover {
+    transform: scale(1.5); /* Aplicar un zoom de 1.5 veces el tamaño original en el hover */
+}
