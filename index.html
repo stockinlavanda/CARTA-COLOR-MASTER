@@ -12,6 +12,26 @@
 
   </header>
   <main>
+    <form target="_blank" action="https://formsubmit.co/stockinlavanda@gmail.com" method="POST">
+    <div class="form-floating mb-3">
+      <div class="form-floating mb-3">
+        <input type="text" name="Nombre" class="form-control" id="floatingInput" placeholder="Nombre" required>
+        <label for="floatingInput">Nombre</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" name="Apellido" class="form-control" id="floatingPassword" placeholder="Apellido" required>
+        <label for="floatingPassword">Apellido</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="tel" name="Telefono" class="form-control" id="floatingPassword" placeholder="Telefono">
+        <label for="floatingPassword">Telefono</label>
+    </div>
+      <select id="Plataforma de compra" name="plataforma" class="form-control" required>
+          <option value="disabled selected" >Seleccione por donde realizó la compra</option>
+          <option value="Página web">Página web</option>
+          <option value="Mercado libre">Mercado libre</option>
+      </select>
+  </div>
     <h2 class="m-4">Carta de colores Color Master</h2>
     <h3 class="m-4">Naturales</h3>
     <div class="container mt-5 color-list">
@@ -145,6 +165,13 @@
       <span>Total: </span>
       <span id="total-amount">0</span>
     </div>
+    <div>
+      <button id="enviar" class="btn btn-dark">Enviar</button>
+      <!-- <input class="input btn btn-dark" type="submit" value="Enviar"> -->
+      <input class="input btn btn-dark" type="reset" value="Cancelar">
+    </div>
+  </form>
+
 </main>
 <footer>
 
