@@ -12,25 +12,16 @@
 
   </header>
   <main>
-    <form target="_blank" action="https://formsubmit.co/stockinlavanda@gmail.com" method="POST">
-    <div class="form-floating mb-3">
-      <div class="form-floating mb-3">
-        <input type="text" name="Nombre" class="form-control" id="floatingInput" placeholder="Nombre" required>
-        <label for="floatingInput">Nombre</label>
+    <form name="mi-formulario" method="POST" data-netlify="true">
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="text" name="Apellido" placeholder="Apellido" required>
+    <input type="tel" name="Telefono" placeholder="Teléfono">
     </div>
-    <div class="form-floating mb-3">
-        <input type="text" name="Apellido" class="form-control" id="floatingPassword" placeholder="Apellido" required>
-        <label for="floatingPassword">Apellido</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="tel" name="Telefono" class="form-control" id="floatingPassword" placeholder="Telefono">
-        <label for="floatingPassword">Telefono</label>
-    </div>
-      <select id="Plataforma de compra" name="plataforma" class="form-control" required>
-          <option value="disabled selected" >Seleccione por donde realizó la compra</option>
-          <option value="Página web">Página web</option>
-          <option value="Mercado libre">Mercado libre</option>
-      </select>
+    <select name="Plataforma de compra" required>
+      <option value="" disabled selected>Seleccione por donde realizó la compra</option>
+      <option value="Página web">Página web</option>
+      <option value="Mercado libre">Mercado libre</option>
+    </select>
   </div>
     <h2 class="m-4">Carta de colores Color Master</h2>
     <h3 class="m-4">Naturales</h3>
@@ -165,16 +156,15 @@
       <span>Total: </span>
       <span id="total-amount">0</span>
     </div>
+    <input type="hidden" name="DetallesArticulos" id="detalles-articulos">
     <div>
-      <button id="enviar" class="btn btn-dark">Enviar</button>
-      <!-- <input class="input btn btn-dark" type="submit" value="Enviar"> -->
-      <input class="input btn btn-dark" type="reset" value="Cancelar">
+      <input type="hidden" name="TotalAmount" id="total-amount" value="0">
+      <button type="submit" class="btn btn-dark">Enviar</button>
+      <input type="reset" class="btn btn-dark" value="Cancelar">
     </div>
   </form>
-
 </main>
 <footer>
-
 </footer>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

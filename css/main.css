@@ -1,18 +1,56 @@
-/* Error: unmatched "}".
- *    ,
- * 49 | } 
- *    | ^
- *    '
- *   scss\_commons.scss 49:1  @import
- *   scss\main.scss 3:9       root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a    \2577 \a 49 \2502  } \d\a    \2502  ^\a    \2575 \a   scss\\_commons.scss 49:1  @import\a   scss\\main.scss 3:9       root stylesheet';
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+* {
+  overflow: hidden;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body main {
+  overflow: hidden;
+}
+body main section h1 h2 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section img {
+  object-fit: cover;
+}
+body main .color-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+body main .color-list .color-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+body main .color-list .color-item .card {
+  align-items: center;
+}
+body main .color-list .color-item .card img {
+  margin: auto;
+}
+body main .color-list input .quantity {
+  width: 40px;
+}
+body main .total {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.zoomable-image {
+  width: 300px; /* Ancho de la imagen */
+  transition: transform 0.2s; /* Transición suave al aplicar el zoom */
+}
+
+.zoomable-image:hover {
+  transform: scale(1.5); /* Aplicar un zoom de 1.5 veces el tamaño original en el hover */
+}
+
+/*# sourceMappingURL=main.css.map */
