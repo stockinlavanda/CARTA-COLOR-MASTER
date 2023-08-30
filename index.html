@@ -12,17 +12,25 @@
 
   </header>
   <main>
-    <form name="mi-formulario" method="POST" data-netlify="true">
-    <input type="text" name="Nombre" placeholder="Nombre" required>
-    <input type="text" name="Apellido" placeholder="Apellido" required>
-    <input type="tel" name="Telefono" placeholder="Teléfono">
-    </div>
-    <select name="Plataforma de compra" required>
-      <option value="" disabled selected>Seleccione por donde realizó la compra</option>
-      <option value="Página web">Página web</option>
-      <option value="Mercado libre">Mercado libre</option>
-    </select>
-  </div>
+    <form name="pedido de tonos color master" method="POST" data-netlify="true">
+      <div>
+        <p>
+          <label><input type="text" name="name" placeholder="Nombre" required /></label>
+        </p>
+        <p>
+          <label><input type="text" name="apellido" placeholder="Apellido" required/></label>
+        </p>
+        <p>
+          <label><input type="tel" name="apellido" placeholder="Teléfono"/></label>
+        </p>
+        <div>
+          <select name="Plataforma de compra" required>
+            <option value="" disabled selected>Seleccione por donde realizó la compra</option>
+            <option value="Página web">Página web</option>
+            <option value="Mercado libre">Mercado libre</option>
+          </select>
+        </div>
+      </div>
     <h2 class="m-4">Carta de colores Color Master</h2>
     <h3 class="m-4">Naturales</h3>
     <div class="container mt-5 color-list">
@@ -157,8 +165,10 @@
       <span id="total-amount">0</span>
     </div>
     <input type="hidden" name="DetallesArticulos" id="detalles-articulos">
+    <div class="m-4">
+      <input type="hidden" name="TotalAmount" id="total-amount" value="0" style="place-items: center;">
+    </div>
     <div>
-      <input type="hidden" name="TotalAmount" id="total-amount" value="0">
       <button type="submit" class="btn btn-dark">Enviar</button>
       <input type="reset" class="btn btn-dark" value="Cancelar">
     </div>
