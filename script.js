@@ -20,38 +20,33 @@ colorItems.forEach(item => {
 
 document.addEventListener("DOMContentLoaded", function() {
   const enviarButton = document.getElementById("enviar");
-  const quantityInputs = document.querySelectorAll(".quantity");
-  
+
   enviarButton.addEventListener("click", function(event) {
     event.preventDefault();
 
     const detalles = [];
     let totalAmount = 0;
 
-    quantityInputs.forEach(function(input) {
-      const parentCard = input.closest(".color-item");
-      const cardTitle = parentCard.querySelector(".card-title").textContent;
-      const cardText = parentCard.querySelector(".card-text").textContent;
-      const quantity = parseInt(input.value);
-      const price = parseFloat(parentCard.getAttribute("data-price"));
-      const subtotal = quantity * price;
+    colorItems.forEach(function(item) {
+      const quantity = parseInt(item.querySelector(".quantity").value);
+      if (quantity > 0) {
+        const cardTitle = item.querySelector(".card-title").textContent;
+        const price = parseFloat(item.getAttribute("data-price"));
+        const subtotal = quantity * price;
+
+        detalles.push({
+          nombre: cardTitle,
+          cantidad: quantity,
+          total: subtotal
+        });
+
+        totalAmount += subtotal;
+      }
     });
-
-    //   if (quantity > 0) {
-    //     detalles.push({
-    //       nombre: cardTitle,
-    //       cantidad: quantity,
-    //       total: subtotal
-    //     });
-
-    //     totalAmount += subtotal;
-    //   }
-    // });
 
     const nombre = document.querySelector('input[name="Nombre"]').value;
     const apellido = document.querySelector('input[name="Apellido"]').value;
     const telefono = document.querySelector('input[name="Telefono"]').value;
-
     const plataformaCompra = document.querySelector('select[name="plataforma"]').value;
 
     const dataToSend = {
@@ -64,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     console.log("Data a enviar:", dataToSend);
+
     fetch("https://formsubmit.co/stockinlavanda@gmail.com", {
       method: "POST",
       headers: {
