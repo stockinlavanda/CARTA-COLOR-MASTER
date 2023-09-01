@@ -14,13 +14,13 @@ colorItems.forEach(item => {
       const quantity = parseInt(item.querySelector('.quantity').value);
       total += quantity * price;
     });
-    totalAmount.textContent = total;
+    totalAmount.textContent = Math.round(total); 
   }
 });
 
 // document.addEventListener("DOMContentLoaded", function() {
 //   const colorItems = document.querySelectorAll('.color-item');
-//   const totalAmountField = document.getElementById('total-amount');
+//   const totalAmountField = document.getElementById('total-amount-detalle');
 //   const detallesArticulosField = document.getElementById('detalles-articulos');
   
 //   colorItems.forEach(item => {
