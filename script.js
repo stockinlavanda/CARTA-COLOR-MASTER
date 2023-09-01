@@ -1,3 +1,19 @@
+function limpiarFormulario() {
+  // Obtén todos los elementos de cantidad y restáuralos a 0
+  const quantityInputs = document.querySelectorAll('.quantity');
+  quantityInputs.forEach(input => {
+    input.value = 0;
+  });
+
+  // Restablece el valor total a 0
+  const totalAmount = document.getElementById('total-amount');
+  totalAmount.textContent = 0;
+
+  // Restablece el campo oculto "TotalAmount" a 0
+  const totalAmountHidden = document.getElementById('total-amount-hidden');
+  totalAmountHidden.value = 0;
+}
+
 console.log("Hola desde JavaScript");
 const colorItems = document.querySelectorAll('.color-item');
 const totalAmount = document.getElementById('total-amount');
