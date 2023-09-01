@@ -1,19 +1,3 @@
-function limpiarFormulario() {
-  // Obtén todos los elementos de cantidad y restáuralos a 0
-  const quantityInputs = document.querySelectorAll('.quantity');
-  quantityInputs.forEach(input => {
-    input.value = 0;
-  });
-
-  // Restablece el valor total a 0
-  const totalAmount = document.getElementById('total-amount');
-  totalAmount.textContent = 0;
-
-  // Restablece el campo oculto "TotalAmount" a 0
-  const totalAmountHidden = document.getElementById('total-amount-hidden');
-  totalAmountHidden.value = 0;
-}
-
 console.log("Hola desde JavaScript");
 const colorItems = document.querySelectorAll('.color-item');
 const totalAmount = document.getElementById('total-amount');
@@ -41,13 +25,18 @@ const handleSubmit = (event) => {
 
   const myForm = event.target;
   const formData = new FormData(myForm);
-  
+
+  // Combina el nombre y el apellido en un solo campo "Nombre" en el formData
+  const nombre = formData.get('nombre');
+  const apellido = formData.get('apellido');
+  formData.set('nombre', nombre + ' ' + apellido);
+
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => alert("Form successfully submitted"))
+    .then(() => alert("Formulario enviado con éxito"))
     .catch((error) => alert(error));
 };
 
