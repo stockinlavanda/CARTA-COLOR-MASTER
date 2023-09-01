@@ -1,7 +1,7 @@
 console.log("Hola desde JavaScript");
 const colorItems = document.querySelectorAll('.color-item');
 const totalAmount = document.getElementById('total-amount');
-const totalAmountHidden = document.getElementById('total-amount-hidden'); // Agrega este selector
+const totalAmountHidden = document.getElementById('total-amount-hidden'); 
 
 colorItems.forEach(item => {
   const quantityInput = item.querySelector('.quantity');
@@ -15,8 +15,6 @@ colorItems.forEach(item => {
       const quantity = parseInt(item.querySelector('.quantity').value);
       total += quantity * price;
     });
-
-    // Actualiza el valor del campo oculto "TotalAmount"
     totalAmount.textContent = Math.round(total);
     totalAmountHidden.value = Math.round(total);
   }
