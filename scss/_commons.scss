@@ -1,52 +1,70 @@
-*{
-    overflow: hidden;
+/* main.css */
+@mixin estilo-texto-y-fondo($color-letra, $color-fondo) {
+    color: $color-letra;
+    background-color: $color-fondo;
+}
+
+  * {
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0; 
-    main {
-        overflow: hidden;
-        section{
-            h1 h2 h3 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                }
-            img {
-                object-fit: cover;
-            }
-            }
-            .color-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-                .color-item {
-                border: 1px solid #ccc;
-                padding: 10px;
-                text-align: center;
-                    .card {
-                        align-items: center;
-                        img {
-                            margin: auto; 
-                        }
-                    }
-                }
-                // .color-image {
-                //     max-width: 100px;
-                //     max-height: 100px;
-                //     margin: 0 auto 10px;
-                //     }
-                    input {
-                        .quantity {
-                        width: 40px;
-                        }
-                    }    
-                }
-            .total {
-            text-align: center;
-            margin-top: 20px;
-            }
+    padding: 0;
+    overflow-y: auto; 
+}
+
+header {
+    p {
+    @include estilo-texto-y-fondo(#fff,  #c5116c); 
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    }
+}
+
+main {
+    h1 h2 h3 {
+        @include estilo-texto-y-fondo(#fff,  #c5116c); 
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
         }
-    }   
+}
+
+main img {
+    object-fit: cover;
+}
+
+.color-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.color-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    margin: auto;
+}
+
+input.quantity {
+    width: 40px;
+}
+
+.total {
+    text-align: center;
+    margin-top: 20px;
+}
+
