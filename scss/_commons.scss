@@ -15,12 +15,28 @@ html, body {
     overflow-y: auto; 
 }
 
+.container {
+    text-align: center;
+}
+
 header {
+    h1{
+        @include estilo-texto-y-fondo(#fff,  #c5116c); 
+        text-align: center;
+        padding: 20px;
+        font-size: 45px;   
+    }
     p {
     @include estilo-texto-y-fondo(#fff,  #c5116c); 
     text-align: center;
     padding: 20px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold
+    }
+    .img-logo{
+        @include estilo-texto-y-fondo(#fff,  #c5116c); 
+        width: 100px;
+        height: 100px
     }
 }
 
@@ -64,7 +80,21 @@ input.quantity {
 }
 
 .total {
+    @include estilo-texto-y-fondo(#fff,  #c5116c); 
     text-align: center;
-    margin-top: 20px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold
+    
+}
+
+.btn-css{
+    @include estilo-texto-y-fondo(#fff,  #c5116c); 
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold
 }
 

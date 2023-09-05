@@ -9,34 +9,55 @@
 </head>
 <body>
   <header>
+    <!-- <div>
+    <a href="https://www.stockinlavanda.com.ar/content/8-capilares" target="_blank">
+    <img class="img-logo"  src="./Images/Logo SLS/logo stockin lavanda nuevo BLANCO.png" alt="Logo Stockin Lavanda">
+    </div> -->
     <h1 class="color-header">SELECCIONE LOS TONOS SEGÚN SU PEDIDO</h1>
-    <P>Tenga en cuenta la cantidad total que ha comprado de los mismos para que su pedido salga en tiempo y forma</P>
+    <P>Tenga en cuenta la cantidad total de tinturas que ha comprado para que su pedido salga en tiempo y forma. Los tonos visibles sons los disponibles en stock.</P>
   </header>
   <main>
+    <div class="container">
     <form name="pedido de tonos color master" method="POST" data-netlify="true">
-      <div>
-        <p>
+      <div class="mb-10px">
           <label><input type="text" name="Nombre" placeholder="Nombre" required /></label>
-        </p>
-        <p>
           <label><input type="text" name="Apellido" placeholder="Apellido" required/></label>
-        </p>
-        <p>
           <label><input type="tel" name="numero de telefono" placeholder="Teléfono"/></label>
-        </p>
-        <div>
           <select name="Plataforma de compra" required>
             <option value="" disabled selected>Seleccione por donde realizó la compra</option>
             <option value="Página web">Página web</option>
             <option value="Mercado libre">Mercado libre</option>
           </select>
-        </div>
       </div>
-    <h2 class="m-4">Carta de colores Color Master</h2>
-    <h3 class="m-4">Naturales</h3>
-    <div class="container mt-5 color-list">
+    <h2 class="m-4">CARTA DE COLORES COLOR MASTER</h2>
+    <h3 class="m-4">NATURALES</h3>
+    <div class="container mt-5 color-list mb-10px" style="align-items: center;">
         <div class="row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-6">
         <!-- Primer artículo -->
+        <div class="col color-item" data-price="1" style="place-items: center;margin: auto; width: 10rem; border-radius: 12px; margin: 10px;">
+          <div class="card" style="width: 9rem; align-items: center;">
+            <img src="Images/01Naturales_1Negro.jpg" class="card-img-top mt-2" alt="Tono negro" style="width: 100px; height: 100px;">
+            <div class="card-body">
+              <h5 class="card-title">1</h5>
+              <p class="card-text">Negro</p>
+              <input type="text" class="item-name" name="1 Negro" value="1 Negro" style="display: none;">
+              <input type="number" class="quantity" name="1 Negro" value="0" min="0" style="width: 8rem;">
+            </div>
+          </div>
+        </div>
+        <!-- fin artículo -->
+        <div class="col color-item" data-price="1" style="place-items: center;margin: auto; width: 10rem; border-radius: 12px; margin: 10px;">
+          <div class="card" style="width: 9rem; align-items: center;">
+            <img src="Images/01Naturales_1Negro.jpg" class="card-img-top mt-2" alt="Tono negro" style="width: 100px; height: 100px;">
+            <div class="card-body">
+              <h5 class="card-title">1</h5>
+              <p class="card-text">Negro</p>
+              <input type="text" class="item-name" name="1 Negro" value="1 Negro" style="display: none;">
+              <input type="number" class="quantity" name="1 Negro" value="0" min="0" style="width: 8rem;">
+            </div>
+          </div>
+        </div>
+        <!-- fin artículo -->
         <div class="col color-item" data-price="1" style="place-items: center;margin: auto; width: 10rem; border-radius: 12px; margin: 10px;">
           <div class="card" style="width: 9rem; align-items: center;">
             <img src="Images/01Naturales_1Negro.jpg" class="card-img-top mt-2" alt="Tono negro" style="width: 100px; height: 100px;">
@@ -203,10 +224,11 @@
     <input type="hidden" name="DetallesArticulos" id="detalles-articulos">
     <input type="hidden" name="TotalAmount" id="total-amount-hidden" value="0">
     <div>
-      <button type="submit" class="btn btn-dark">Enviar</button>
-      <input type="reset" class="btn btn-dark" value="Cancelar" onclick="limpiarFormulario()">
+      <button type="submit" class="btn btn-dark btn-css">Enviar</button>
+      <input type="reset" class="btn btn-dark btn-css" value="Cancelar" onclick="limpiarFormulario()">
     </div>
   </form>
+</div>
 </main>
 <footer>
 </footer>

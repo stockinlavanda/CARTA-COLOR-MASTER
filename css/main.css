@@ -12,12 +12,30 @@ html, body {
   overflow-y: auto;
 }
 
+.container {
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  background-color: #c5116c;
+  text-align: center;
+  padding: 20px;
+  font-size: 45px;
+}
 header p {
   color: #fff;
   background-color: #c5116c;
   text-align: center;
   padding: 20px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+header .img-logo {
+  color: #fff;
+  background-color: #c5116c;
+  width: 100px;
+  height: 100px;
 }
 
 main h1 h2 h3 {
@@ -59,8 +77,23 @@ input.quantity {
 }
 
 .total {
+  color: #fff;
+  background-color: #c5116c;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-css {
+  color: #fff;
+  background-color: #c5116c;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .zoomable-image {
