@@ -1,3 +1,4 @@
+
 console.log("Hola desde JavaScript");
 const colorItems = document.querySelectorAll('.color-item');
 const totalAmount = document.getElementById('total-amount');
@@ -26,7 +27,6 @@ const handleSubmit = (event) => {
   const myForm = event.target;
   const formData = new FormData(myForm);
 
-  // Combina el nombre y el apellido en un solo campo "Nombre" en el formData
   const nombre = formData.get('nombre');
   const apellido = formData.get('apellido');
   formData.set('nombre', nombre + ' ' + apellido);

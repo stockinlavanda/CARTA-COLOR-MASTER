@@ -17,6 +17,8 @@ html, body {
 
 .container {
     text-align: center;
+    place-items: center;
+    justify-items: center;
 }
 
 header {
@@ -40,7 +42,12 @@ header {
     }
 }
 
-main {
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh; 
     h1 h2 h3 {
         @include estilo-texto-y-fondo(#fff,  #c5116c); 
         text-align: center;
@@ -49,6 +56,16 @@ main {
         }
 }
 
+.heading{
+    .centrar-contenido {
+        align-items: center; /* Centrar horizontalmente */
+        justify-content: center; /* Centrar verticalmente */
+        height: 100vh; /* Establecer el alto del contenedor al 100% del viewport */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
 main img {
     object-fit: cover;
 }
@@ -56,7 +73,8 @@ main img {
 .color-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center; 
 }
 
 .color-item {
@@ -65,14 +83,18 @@ main img {
     text-align: center;
 }
 
+.elements{
+        display: flex;
+        flex-wrap: wrap;
+}
+
 .card {
     align-items: center;
     display: flex;
     flex-direction: column;
-}
-
-.card img {
-    margin: auto;
+    .card img {
+        margin: auto;
+    }
 }
 
 input.quantity {
