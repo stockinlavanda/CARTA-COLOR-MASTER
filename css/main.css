@@ -23,7 +23,7 @@ header h1 {
   background-color: #c5116c;
   text-align: center;
   padding: 20px;
-  font-size: 45px;
+  font-size: 30px;
 }
 header p {
   color: #fff;
@@ -33,12 +33,6 @@ header p {
   font-size: 20px;
   font-weight: bold;
 }
-header .img-logo {
-  color: #fff;
-  background-color: #c5116c;
-  width: 100px;
-  height: 100px;
-}
 
 main {
   display: flex;
@@ -47,20 +41,29 @@ main {
   justify-content: center;
   min-height: 100vh;
 }
-main h1 h2 h3 {
+main h1 {
   color: #fff;
   background-color: #c5116c;
   text-align: center;
-  padding: 20px;
-  font-size: 16px;
+  padding: auto;
+  font-size: 36px;
 }
-
-.heading {
-  color: #fff;
-  background-color: #c5116c;
+main h2 {
   text-align: center;
-  padding: 20px;
-  font-size: 45px;
+  padding: auto;
+  font-size: 36px;
+}
+main h3 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+}
+main .seccion-tittle {
+  text-align: center;
+  padding: auto;
+  margin: auto;
+  width: 100%;
 }
 
 .centrar-contenido {
