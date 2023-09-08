@@ -14,6 +14,8 @@ html, body {
 
 .container {
   text-align: center;
+  place-items: center;
+  justify-items: center;
 }
 
 header h1 {
@@ -38,6 +40,13 @@ header .img-logo {
   height: 100px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 main h1 h2 h3 {
   color: #fff;
   background-color: #c5116c;
@@ -46,14 +55,31 @@ main h1 h2 h3 {
   font-size: 16px;
 }
 
+.heading {
+  color: #fff;
+  background-color: #c5116c;
+  text-align: center;
+  padding: 20px;
+  font-size: 45px;
+}
+
+.centrar-contenido {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 main img {
   object-fit: cover;
 }
 
 .color-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
 }
 
 .color-item {
@@ -62,13 +88,17 @@ main img {
   text-align: center;
 }
 
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-
-.card img {
+.card .card img {
   margin: auto;
 }
 
