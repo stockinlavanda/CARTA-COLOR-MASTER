@@ -1,8 +1,7 @@
-
 console.log("Hola desde JavaScript");
 const colorItems = document.querySelectorAll('.color-item');
 const totalAmount = document.getElementById('total-amount');
-const totalAmountHidden = document.getElementById('total-amount-hidden'); 
+const totalAmountHidden = document.getElementById('total-amount-hidden');
 
 colorItems.forEach(item => {
   const quantityInput = item.querySelector('.quantity');
@@ -43,3 +42,31 @@ const handleSubmit = (event) => {
 document
   .querySelector("form")
   .addEventListener("submit", handleSubmit);
+
+// Función para exportar los tonos a CSV
+function exportarCSV() {
+  const colorItems = document.querySelectorAll('.color-item');
+  const data = [];
+  
+  colorItems.forEach(item => {
+    const cantidad = parseInt(item.querySelector('.quantity').value);
+    if (cantidad > 0) {
+      const colorNombre = item.getAttribute('data-color-nombre');
+      data.push([colorNombre, cantidad]);
+    }
+  });
+
+  const csvContent = "Color,Cantidad\n" + data.map(e => e.join(",")).join("\n");
+
+  const blob = new Blob([csvContent], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'tonos.csv';
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
+// Llamar a la función de exportación cuando sea necesario, por ejemplo, al hacer clic en un botón de exportación
+document.getElementById('export-button').addEventListener('click', exportarCSV);
