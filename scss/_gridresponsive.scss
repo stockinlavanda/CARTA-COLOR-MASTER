@@ -7,13 +7,16 @@
     transform: scale(1.5); /* Aplicar un zoom de 1.5 veces el tamaño original en el hover */
 }
 
-// @media (min-width: 1024px) {
-//     .color-list {
-//     row-cols: 3;
-//     }
-// }
-// @media (max-width: 1023px) {
-//     .color-list {
-//     row-cols: 2;
-//     }
-// }
+@media (min-width: 1024px) {
+    .color-list {
+    row-cols: 3;
+    justify-content: center;
+    }
+}
+@media (max-width: 1023px) {
+    .color-list {
+    row-cols: 2;
+    justify-content: center;
+    }
+}
+

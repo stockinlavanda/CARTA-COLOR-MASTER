@@ -19,6 +19,7 @@ html, body {
     text-align: center;
     place-items: center;
     justify-items: center;
+
 }
 
 header {
@@ -69,7 +70,7 @@ main{
     .seccion-tittle {
         text-align: center;
         padding: auto;
-        margin: auto;
+        margin: 10px;
         width: 100%;
     }
 }
@@ -102,6 +103,7 @@ main img {
 .elements{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 }
 
 .card {
